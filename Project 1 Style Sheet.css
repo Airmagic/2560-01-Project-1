@@ -1,0 +1,38 @@
+/* Setting the parameters for paragraphs */
+p{
+	 color: black;
+	 Font-size: 20px;
+	}
+/* Setting the parameters for Header 1 */
+h1 {
+	 color: Purple;
+	 Text-align: center;
+	}
+/* Setting the parameters for body of the html document */
+body {
+	 background-color:lightblue;
+	}
+/* Setting the parameters for hyper links */
+a{
+	  background-color: lightgreen;
+	  text-decoration: none;
+	}
+/* Setting the parameters for images */
+img {
+  border-style: dotted;
+  border-width: 5px;
+  border-color: green;
+}
+/* Setting the parameters for jumbotron header */
+.jumbotron {
+	Text-align: center;
+	font-style: italic;
+	color: black;
+	background: blue;
+	text-shadow: 2px 2px darkblue ;
+}
+/* Setting the parameters for canvas */
+#canvas {
+	  border: 5px black solid;
+	  background-color: white;
+	}
