@@ -56,6 +56,7 @@
 
 		#canvas {
 			  border: 5px black solid;
+			  background-color: white;
 			}
 	<!-- Closing the style -->
   </style>
@@ -78,6 +79,13 @@
 		<div class="col-sm-6">
 			  <!-- look its a paragraph -->
 			<p>Click on the canvas to make some point art</p>
+			<!-- here is a hyper link button to save the img -->
+			<a href="#" class="button" id="btn-download" download="myPicFile.jpg">Save Your Image</a>
+			<!-- here is a button to clear the canvas -->
+			<span id="buttons">
+				<input type="button" id="clear" value="Clear">
+			</span>
+			</br>
 			<!-- building the canvas size inwhich to build all the objects  -->
 			<canvas id="canvas" height="250" width="250">
 			<!-- closing the canvas -->
@@ -86,7 +94,6 @@
 			</br>
 			<!-- making a class for the dropdown -->
 			<!-- making a span instead of div to put dropdown under canvas -->
-			<span class="dropdown">
 			<!-- select statment to make a button for colors -->
 			<select id="colorSelect">
 				<!-- first option disabled to explain what the options are for -->
@@ -108,15 +115,14 @@
 				<option value="grey">Grey</option>
 				<option value="silver">Silver</option>
 				<option value="white">White</option>
-			<!-- closing the span -->
-			</span>
+			</select>
 			
-			<button class="btn" type="button" id="saveCanvas">
-			Save Image as Jpeg
-			</button
+		</div>
+		<div class="col-sm-6">
 			
 		</div>
 	</div>
+	
 	<!-- creating the script for the page, normally in a .js file -->
 	<script>
 		<!-- This finds the canvas element in the html webpage -->
@@ -146,11 +152,19 @@
 			context.fill();
 		}
 		
-		function download() {
-			var dt = canvas.toDataURL('image/jpeg');
-			this.href = dt;
-			};
-			downloadLnk.addEventListener('click', download, false);
+		<!-- this is where the downloading for the picture is -->
+		<!-- making tha varible for the button and setting it to the id btn-download -->
+		var button = document.getElementById('btn-download');
+		<!-- adding a event listener when it is clicked -->
+		button.addEventListener('click', function (e) {
+			var dataURL = canvas.toDataURL('image/jpg');
+			button.href = dataURL;
+			});
+		<!-- this is to clear the canvas	 -->
+		document.getElementById('clear').addEventListener('click', function() {
+			context.clearRect(0, 0, canvas.width, canvas.height);
+		  }, false);
+
 	//closing the script
 	</script>
 	<!-- closing the body -->
