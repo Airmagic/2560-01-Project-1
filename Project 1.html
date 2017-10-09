@@ -16,39 +16,35 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- This is the CSS style sheet -->
-	<link rel="stylesheet" type="text/css" href="Project 1 Style Sheet.css">
+	<!-- <link rel="stylesheet" type="text/css" href="Project 1 Style Sheet.css"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Making a style in the page, normally in a separate .css file -->
 <style>
-		 <!-- setting the paragraph parameters -->
 	p{
 		 color: black;
 		 Font-size: 20px;
 		}
-		<!-- setting the header 1 parameters -->
+
 	h1 {
 		 color: Purple;
 		 Text-align: center;
 		}
-		<!-- setting the body parameters -->
+		
 	body {
-		 background-color:green;
+		 background-color:lightblue;
 		}
 		
-		<!-- setting the hyperlink parameters -->
 	a{
 		  background-color: lightgreen;
 		  text-decoration: none;
 		}
-
-		<!-- setting the img parameters -->
+		
 		img {
 		  border-style: dotted;
 		  border-width: 5px;
 		  border-color: green;
 		}
-
 
 		.jumbotron{
 			Text-align: center;
@@ -68,13 +64,16 @@
 	<!-- opening the body of the page -->
     <body>
 	<div class="container">
-	
+	  <!-- making a head for the page with a jumbotron -->
 	  <div class="jumbotron">
+	  <!-- using a header -->
 	  <h1>Eric's online Resume</h1>
+	  <!-- making a paragraph in the jombotron -->
 	  <p>Hard working employee who works well with others</p>
 		<p>and also is will to learn new things</p>
 	  
 	  </div>
+	<!-- making a row so the canvas can stack well -->
 	<div class="row">
 		<div class="col-sm-6">
 			  <!-- look its a paragraph -->
@@ -83,10 +82,16 @@
 			<canvas id="canvas" height="250" width="250">
 			<!-- closing the canvas -->
 			</canvas>
+			<!-- making a br so dropdown is under canvas -->
 			</br>
+			<!-- making a class for the dropdown -->
+			<!-- making a span instead of div to put dropdown under canvas -->
 			<span class="dropdown">
-			<select>
+			<!-- select statment to make a button for colors -->
+			<select id="colorSelect">
+				<!-- first option disabled to explain what the options are for -->
 				<option selected disabled>Colors</option>
+				<!-- all the options for colors -->
 				<option value="fuchsia">Fuchsia</option>
 				<option value="purple">Purple</option>
 				<option value="navy">Navy</option>
@@ -103,7 +108,13 @@
 				<option value="grey">Grey</option>
 				<option value="silver">Silver</option>
 				<option value="white">White</option>
+			<!-- closing the span -->
 			</span>
+			
+			<button class="btn" type="button" id="saveCanvas">
+			Save Image as Jpeg
+			</button
+			
 		</div>
 	</div>
 	<!-- creating the script for the page, normally in a .js file -->
@@ -119,12 +130,14 @@
 		
 		//creating the function to draw small circles on the canvas where clicked
 		function drawCircle(){
+			var c = document.getElementById("colorSelect");
+			var colorSelected = c.options[c.selectedIndex].value;
 			//making the varibles for the x and y axis
 			var xLocation = event.offsetX;
 			var yLocation = event.offsetY;
 			
 			//changing the style fill color
-			context.fillStyle = 'gold';
+			context.fillStyle = colorSelected;
 			//starting the begin path to make a circle
 			context.beginPath();
 			//making a cicle and moving it so clicking the center about
@@ -132,6 +145,12 @@
 			//commetting the context to the canvas
 			context.fill();
 		}
+		
+		function download() {
+			var dt = canvas.toDataURL('image/jpeg');
+			this.href = dt;
+			};
+			downloadLnk.addEventListener('click', download, false);
 	//closing the script
 	</script>
 	<!-- closing the body -->
