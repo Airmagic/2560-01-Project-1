@@ -26,9 +26,12 @@ img {
 /* Setting the parameters for jumbotron header */
 .jumbotron {
 	Text-align: center;
-	font-style: italic;
+	font-style: italic; 
 	color: black;
 	background: blue;
+}
+.jumbotron h1 {
+	font-style: italic;
 	text-shadow: 2px 2px darkblue ;
 }
 /* Setting the parameters for canvas */
