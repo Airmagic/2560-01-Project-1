@@ -1,0 +1,140 @@
+<!-- declaring the html document -->
+<!DOCTYPE html>
+<!-- declaring the language for the page -->
+<html lang="en">
+<!-- making the header for the page -->
+<head>
+  <meta charset="UTF-8">
+  <title>Eric's Online Resume</title>
+  <!-- The visible area of the page-->
+    <meta name="viewpoint" content="width=device-width inital-scale=1">
+	<!-- This is loading in the bootstrap style sheet into the webpage -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- This is the CSS style sheet -->
+	<link rel="stylesheet" type="text/css" href="Project 1 Style Sheet.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Making a style in the page, normally in a separate .css file -->
+<style>
+		 <!-- setting the paragraph parameters -->
+	p{
+		 color: black;
+		 Font-size: 20px;
+		}
+		<!-- setting the header 1 parameters -->
+	h1 {
+		 color: Purple;
+		 Text-align: center;
+		}
+		<!-- setting the body parameters -->
+	body {
+		 background-color:green;
+		}
+		
+		<!-- setting the hyperlink parameters -->
+	a{
+		  background-color: lightgreen;
+		  text-decoration: none;
+		}
+
+		<!-- setting the img parameters -->
+		img {
+		  border-style: dotted;
+		  border-width: 5px;
+		  border-color: green;
+		}
+
+
+		.jumbotron{
+			Text-align: center;
+			font-style: italic;
+			color: black;
+			background: blue;
+			text-shadow: 2px 2px darkblue ;
+		}
+
+		#canvas {
+			  border: 5px black solid;
+			}
+	<!-- Closing the style -->
+  </style>
+<!-- closing the header -->
+</head>
+	<!-- opening the body of the page -->
+    <body>
+	<div class="container">
+	
+	  <div class="jumbotron">
+	  <h1>Eric's online Resume</h1>
+	  <p>Hard working employee who works well with others</p>
+		<p>and also is will to learn new things</p>
+	  
+	  </div>
+	<div class="row">
+		<div class="col-sm-6">
+			  <!-- look its a paragraph -->
+			<p>Click on the canvas to make some point art</p>
+			<!-- building the canvas size inwhich to build all the objects  -->
+			<canvas id="canvas" height="250" width="250">
+			<!-- closing the canvas -->
+			</canvas>
+			</br>
+			<span class="dropdown">
+			<select>
+				<option selected disabled>Colors</option>
+				<option value="fuchsia">Fuchsia</option>
+				<option value="purple">Purple</option>
+				<option value="navy">Navy</option>
+				<option value="blue">Blue</option>
+				<option value="teal">Teal</option>
+				<option value="aqua">Aqua</option>
+				<option value="green">Green</option>
+				<option value="lime">Lime</option>
+				<option value="olive">Olive</option>
+				<option value="yellow">Yellow</option>
+				<option value="maroon">Maroon</option>
+				<option value="red">Red</option>
+				<option value="black">Black</option>
+				<option value="grey">Grey</option>
+				<option value="silver">Silver</option>
+				<option value="white">White</option>
+			</span>
+		</div>
+	</div>
+	<!-- creating the script for the page, normally in a .js file -->
+	<script>
+		<!-- This finds the canvas element in the html webpage -->
+		var canvas = document.getElementById("canvas");
+		
+		//this is a context object that is used to make the drawning on the canvas
+		var context = canvas.getContext("2d");
+		
+		//creating a event to listen for mouse clicks of the canvas
+		canvas.addEventListener("click", drawCircle);
+		
+		//creating the function to draw small circles on the canvas where clicked
+		function drawCircle(){
+			//making the varibles for the x and y axis
+			var xLocation = event.offsetX;
+			var yLocation = event.offsetY;
+			
+			//changing the style fill color
+			context.fillStyle = 'gold';
+			//starting the begin path to make a circle
+			context.beginPath();
+			//making a cicle and moving it so clicking the center about
+			context.arc(xLocation-5, yLocation-5, 5, 0, 2 * Math.PI);
+			//commetting the context to the canvas
+			context.fill();
+		}
+	//closing the script
+	</script>
+	<!-- closing the body -->
+	</body>
+<!-- closing the html page -->
+</html>
