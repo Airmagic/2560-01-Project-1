@@ -30,6 +30,7 @@ img {
 	color: black;
 	background: blue;
 }
+/* setting different header 1 parameter for jumbotron  */
 .jumbotron h1 {
 	color: black
 	font-style: italic;
