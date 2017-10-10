@@ -33,54 +33,96 @@
 		<p>and also is will to learn new things</p>
 	  
 	  </div>
-	<!-- making a row so the canvas can stack well -->
-	<div class="row">
-		<div class="col-sm-6">
-			  <!-- look its a paragraph -->
-			<p>Click on the canvas to make some point art</p>
-			<!-- here is a hyper link button to save the img -->
-			<a href="#" class="button" id="btn-download" download="myPicFile.jpg">Save Your Image</a>
-			<!-- here is a button to clear the canvas -->
-			<span id="buttons">
-				<input type="button" id="clear" value="Clear">
-			</span>
-			</br>
-			<!-- building the canvas size inwhich to build all the objects  -->
-			<canvas id="canvas" height="250" width="250">
-			<!-- closing the canvas -->
-			</canvas>
-			<!-- making a br so dropdown is under canvas -->
-			</br>
-			<!-- making a class for the dropdown -->
-			<!-- making a span instead of div to put dropdown under canvas -->
-			<!-- select statment to make a button for colors -->
-			<select id="colorSelect">
-				<!-- first option disabled to explain what the options are for -->
-				<option selected disabled>Colors</option>
-				<!-- all the options for colors -->
-				<option value="fuchsia">Fuchsia</option>
-				<option value="purple">Purple</option>
-				<option value="navy">Navy</option>
-				<option value="blue">Blue</option>
-				<option value="teal">Teal</option>
-				<option value="aqua">Aqua</option>
-				<option value="green">Green</option>
-				<option value="lime">Lime</option>
-				<option value="olive">Olive</option>
-				<option value="yellow">Yellow</option>
-				<option value="maroon">Maroon</option>
-				<option value="red">Red</option>
-				<option value="black">Black</option>
-				<option value="grey">Grey</option>
-				<option value="silver">Silver</option>
-				<option value="white">White</option>
-			</select>
-			
+	
+<div class="container">
+  <h2>Resume and Programming lanuages</h2>
+  <p>Here is my resume and different languages I know and some have examples of programs I have writen in them</p>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Resume</a></li>
+    <li><a data-toggle="tab" href="#menu1">C#</a></li>
+    <li><a data-toggle="tab" href="#menu2">Python</a></li>
+    <li><a data-toggle="tab" href="#menu3">Web Clint and Server Design</a></li>
+	<li><a data-toggle="tab" href="#menu4">SQL Server</a></li>
+  </ul>
+
+	<div class="tab-content">
+		<div id="home" class="tab-pane fade in active">
+		  <h3>Resume</h3>
+			<p>·	Highly work motivated individual
+				</br>·	Enjoy learning new information and ways to do things. 
+				</br>·	Good problem solving techniques
+				</br>·	Good accountability, communication skills, and assertiveness.
+				</br>·	Ability to independently work on projects and understand requirements
+				</br>·	Work well in a group to complete projects
+			</p>
 		</div>
-		<div class="col-sm-6">
-			
+		<div id="menu1" class="tab-pane fade">
+		  <h3>C3</h3>
+		  <p>(pronounced "C-sharp") is an object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic. C# is based on C++ and contains features similar to those of Java.</p>
+		</div>
+		<div id="menu2" class="tab-pane fade">
+		  <h3>Python</h3>
+		  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+		</div>
+		<div id="menu3" class="tab-pane fade">
+		  <h3>Web Clint and Server Design</h3>
+		  <!-- making a row so the canvas can stack well -->
+			<div class="row">
+				<div class="col-sm-6">
+					  <!-- look its a paragraph -->
+					<p>Click on the canvas to make some point art</p>
+					<!-- here is a hyper link button to save the img -->
+					<a href="#" class="button" id="btn-download" download="myPicFile.jpg">Save Your Image</a>
+					<!-- here is a button to clear the canvas -->
+					<span id="buttons">
+						<input type="button" id="clear" value="Clear">
+					</span>
+					</br>
+					<!-- building the canvas size inwhich to build all the objects  -->
+					<canvas id="canvas" height="250" width="250">
+					<!-- closing the canvas -->
+					</canvas>
+					<!-- making a br so dropdown is under canvas -->
+					</br>
+					<!-- making a class for the dropdown -->
+					<!-- making a span instead of div to put dropdown under canvas -->
+					<!-- select statment to make a button for colors -->
+					<select id="colorSelect">
+						<!-- first option disabled to explain what the options are for -->
+						<option selected disabled>Colors</option>
+						<!-- all the options for colors -->
+						<option value="fuchsia">Fuchsia</option>
+						<option value="purple">Purple</option>
+						<option value="navy">Navy</option>
+						<option value="blue">Blue</option>
+						<option value="teal">Teal</option>
+						<option value="aqua">Aqua</option>
+						<option value="green">Green</option>
+						<option value="lime">Lime</option>
+						<option value="olive">Olive</option>
+						<option value="yellow">Yellow</option>
+						<option value="maroon">Maroon</option>
+						<option value="red">Red</option>
+						<option value="black">Black</option>
+						<option value="grey">Grey</option>
+						<option value="silver">Silver</option>
+						<option value="white">White</option>
+					</select>
+					
+				</div>
+				<div class="col-sm-6">
+					
+				</div>
+			</div>
+		</div>
+		<div id="menu4" class="tab-pane fade">
+		  <h3>SQL Server</h3>
+		  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		</div>
 	</div>
+</div>
+
 	<!-- putting in the javascript file  -->
 	<script type="text/javascript" src="Project 1 JavaS.js"></script>
 	<!-- closing the body -->
