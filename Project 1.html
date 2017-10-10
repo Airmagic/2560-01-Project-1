@@ -31,39 +31,65 @@
 	  <!-- making a paragraph in the jombotron -->
 	  <p>Hard working employee who works well with others</p>
 		<p>and also is will to learn new things</p>
-	  
-	  </div>
-	
+	<!-- CLosing the div -->
+	</div>
+
+<!-- creating a div container to creat a tab menu, got it from W3 schools	 -->
 <div class="container">
-  <h2>Resume and Programming lanuages</h2>
-  <p>Here is my resume and different languages I know and some have examples of programs I have writen in them</p>
+	<!-- Putting a title to the tabs on the page -->
+	<h2>Resume and Programming lanuages</h2>
+	<p>Here is my resume and different languages I know and some have examples of programs I have writen in them</p>
 
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Resume</a></li>
-    <li><a data-toggle="tab" href="#menu1">C#</a></li>
-    <li><a data-toggle="tab" href="#menu2">Python</a></li>
-    <li><a data-toggle="tab" href="#menu3">Web Clint and Server Design</a></li>
-	<li><a data-toggle="tab" href="#menu4">SQL Server</a></li>
-  </ul>
-
+	<!-- Creating the tabs for the menu and making referances for them -->
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">Resume</a></li>
+		<li><a data-toggle="tab" href="#menu1">C#</a></li>
+		<li><a data-toggle="tab" href="#menu2">Python</a></li>
+		<li><a data-toggle="tab" href="#menu3">Web Clint and Server Design</a></li>
+		<li><a data-toggle="tab" href="#menu4">SQL Server</a></li>
+	</ul>
+	<!-- Creating the information that is going into the tabs -->
 	<div class="tab-content">
+		<!-- making the home tab that is resume and making it fade when not active -->
 		<div id="home" class="tab-pane fade in active">
-		  <h3>Resume</h3>
-			<p>·	Highly work motivated individual
-				</br>·	Enjoy learning new information and ways to do things. 
-				</br>·	Good problem solving techniques
-				</br>·	Good accountability, communication skills, and assertiveness.
-				</br>·	Ability to independently work on projects and understand requirements
-				</br>·	Work well in a group to complete projects
-			</p>
+			<!-- making rows and columes so that if that page gets changed they move together -->
+			<div class="row">
+				<div class="col-sm-6">
+					<!-- first tab header and paragraph -->
+					<h3>Resume</h3>
+					<p>·	Highly work motivated individual
+						</br>·	Enjoy learning new information and ways to do things. 
+						</br>·	Good problem solving techniques
+						</br>·	Good accountability, communication skills, and assertiveness.
+						</br>·	Ability to independently work on projects and understand requirements
+						</br>·	Work well in a group to complete projects
+					</p>
+				</div>
+			</div>
 		</div>
+		<!-- menu1 setup -->
 		<div id="menu1" class="tab-pane fade">
-		  <h3>C3</h3>
-		  <p>(pronounced "C-sharp") is an object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic. C# is based on C++ and contains features similar to those of Java.</p>
+			<div class="row">
+					<div class="col-sm-6">
+						<h3>C3</h3>				
+						<p>(pronounced "C-sharp") is an object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic. C# is based on C++ and contains features similar to those of Java.</p>
+					</div>
+				</div>
 		</div>
 		<div id="menu2" class="tab-pane fade">
-		  <h3>Python</h3>
-		  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>Python</h3>
+					<p>Python is a widely used high-level programming language for general-purpose 
+					programming, created by Guido van Rossum and first released in 1991. 
+					An interpreted language, Python has a design philosophy that emphasizes code 
+					readability (notably using whitespace indentation to delimit code blocks rather 
+					than curly brackets or keywords), and a syntax that allows programmers to express 
+					concepts in fewer lines of code than might be used in languages such as C++ or Java.
+					The language provides constructs intended to enable writing clear programs on both a 
+					small and large scale. <a href="https://en.wikipedia.org/wiki/Python_(programming_language)"> ~Wikipedia</p></a>
+				</div>
+			</div>
 		</div>
 		<div id="menu3" class="tab-pane fade">
 		  <h3>Web Clint and Server Design</h3>
@@ -112,13 +138,20 @@
 					
 				</div>
 				<div class="col-sm-6">
-					
+					<p> Making this simple canvas work on the webpages does take a little bit of work.
+					</br>
+					This page was wrote using notepad++.
+					</p>
 				</div>
 			</div>
 		</div>
 		<div id="menu4" class="tab-pane fade">
 		  <h3>SQL Server</h3>
-		  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+			<div class="row">
+				<div class="col-sm-6">
+					<p>SQL Developer Job Description Template. SQL is a declarative programming language that is used in many relational databases. The specific syntax of SQL may vary a little from database to database, but the relevant concepts are mostly the same.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
